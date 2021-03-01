@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.js-btn,
+.js-hide-show_btn {
+  background: rgb(255,255,255); /* Fallback */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(243,243,243,1) 100%);
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(000,000,000,0.1), inset 0 0 3px rgba(255,255,255,1);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+  margin: 1em 5px;
+  padding: 5px 1em;
+  text-shadow: 0 -1px 0 rgba(000,000,000,0.2), 0 1px 0 rgba(255,255,255,1);
+}
+
+.js-accordion {
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+.js-accordion .js-accordion_control {
+  background: url('glass-arrow-down.png') no-repeat 98% 50% #003466;
+  color: #E7E7E7;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  border-bottom: 1px solid #E7E7E7;
+  font-size: 1.25em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+
+.js-accordion .js-accordion_control--active {
+  background-image: none;
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+  color: #003466;
+  font-weight: 700;
+}
+
+.js-accordion .js-accordion_control.active-hidden {
+  position: absolute;
+  left: -999em;
+}
+
+.js-accordion .js-accordion_control span {
+  display: block;
+  padding: 15px;
+}
+
+.js-accordion .js-accordion_control:hover,
+.js-accordion .js-accordion_control:active,
+.js-accordion .js-accordion_control:focus {
+  cursor: pointer;
+  background-color: #E7E7E7;
+  color: #003466;
+  transition: background-color .33s;
+}
+
+.js-accordion .js-accordion_panel {
+  background: #E7E7E7;
+  overflow: hidden;
+  border-bottom: 3px solid #E7E7E7;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+.js-accordion .accordion_section_inner { padding: 0 20px; }
+
+.js-accordion .accordion_section_heading {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 10px 18px;
+}
+
+/* Horizontal accordion */
+
+
+.js-accordion--horizontal .js-accordion_control {
+  background: url('glass-arrow.png') no-repeat 83% 97% #003466;
+  border-right: 1px solid #E7E7E7;
+  float: left;
+  text-align: center;
+}
+
+.js-accordion--horizontal .js-accordion_control span { padding: 10px; }
+
+.js-accordion--horizontal .js-accordion_control--active {
+  background-image: none;
+  background-color: #E7E7E7;
+}
+
+.js-accordion--horizontal .js-accordion_control--hidden {
+  left: -999em;
+  position: absolute;
+}
+
+.js-accordion--horizontal .js-accordion_panel { float: left; }
+
+.js-accordion .js-accordion_panel-title {
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.lte7 .js-accordion--horizontal .js-accordion_control { border-right: none; }
+
+.wrapper {
+  max-width: 480px;
+  margin: 150px auto;
+}
+</style>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/accordion/Easy-Accessible-jQuery-Accordion-Plugin.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="wrapper">
+  <h2>Vertical Accordion Example</h2>
+  <div class="accordion example-v">
+    <h3>Tab 1</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing</a> elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper.</p>
+    </div>
+    <h3>Tab 2</h3>
+    <div>
+      <p style="padding:0 20px;">Ut laoreet augue et neque pretium non sagittis nibh pulvinar.</p>
+    </div>
+    <h3>Tab 3</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque.</p>
+    </div>
+    <h3>Tab 4</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar.</p>
+    </div>
+    <h3>Tab 5</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque.</p>
+    </div>
+  </div>
+  <h2>Horizontal Accordion Example</h2>
+  <div class="accordion example-h">
+    <h3>Tab 1</h3>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing</a> elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper.</p>
+    </div>
+    <h3>Tab 2</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque.</p>
+      <p>Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam.</p>
+    </div>
+    <h3>Tab 3</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque.</p>
+    </div>
+    <h3>Tab 4</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar.</p>
+    </div>
+    <h3>Tab 5</h3>
+    <div>
+      <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque.</p>
+    </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> 
+<script src="jquery.accAccordion.js"></script> 
+<script src="jquery.debouncedresize.js"></script> 
+<script>
+$('.example-v').accAccordion();
+$('.example-h').accAccordion({ defaultPanel: 0,horizontal: true});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

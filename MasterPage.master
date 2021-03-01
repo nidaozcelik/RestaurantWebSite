@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style style="font-size: 12px">
+        body 
+        {
+            font-family: pt-sans-narrow, sans-serif;
+            text-align:center;
+            background-position-x:center;
+
+        }
+        html 
+        {
+	background: url(res/4.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+      }
+        .div {
+	float: left;
+	height: 200px;
+	width: 300px;
+	margin: 10px;
+	color: #FFF;
+}
+ 
+        #d0
+{
+	
+	width: 68%;
+	float:left;
+    margin: 2% 2% 3% 2%;
+    height: 46px;
+        }
+         #d11 {
+            
+            width: 22%;
+            float: left;
+            margin: 2%;
+            height: 19px;
+          
+        }
+            #d12 {
+            
+            width: 22%;
+            float: left;
+            margin: 2%;
+            height: 19px;
+          
+        }
+#d1
+{
+	
+	width: 10%;
+	float: left;
+	margin: 2%
+        }
+#d2
+{
+	
+	width: 7%;
+	float: left;
+	margin: 2%;
+}
+
+        #d3 {
+           
+            width: 15%;
+            float: left;
+            margin: 2%;
+        }
+ 
+
+        #d6 {
+            
+            width: 11%;
+            float: left;
+            margin: 2%;
+        }
+        #d7
+{
+	
+	float: left;
+	margin: 2%;
+            width: 52px;
+        }
+
+        #d8 {
+            
+            width: 16%;
+            float: left;
+            margin: 2%;
+            height: 19px;
+        }
+          #d9 {
+            
+            width: 15%;
+            float: left;
+            margin: 2%;
+            height: 19px;
+        }
+        #d100 {
+            
+            width: 15%;
+            float: left;
+            margin: 2%;
+            height: 19px;
+        }
+       
+
+        .newStyle1 {
+            font-family: pt-sans-narrow, sans-serif;
+            font-size:15px;
+            
+        }
+        .container
+        
+       {margin-left:auto;
+margin-right:auto;}
+        a {
+     text-decoration:none;
+}
+        a:link { color:#808080; text-decoration:none}
+        a:hover {color:#ffffff;  text-decoration:none}
+        
+        
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="width:960px; height: 216px;" class="container">
+  <div class="div" id="11" style="width: 101px; height: 176px">
+            <img src="res/13.png" style="height: 184px; width: 103px" /></div>
+        
+            <div class="div" id="d0" style="top: 7px">
+                <div id="d1">
+                    <span class="newStyle1"><strong><a href="Aqua.aspx">Aqua</a></strong></span>
+                </div>
+                <div id="d3">
+                    <span class="newStyle1"><strong><a href="Bruch.aspx">Bruch</a></strong></span>
+                </div>
+                <div id="d6">
+                    <a href="Galeri.aspx">
+                    <span class="newStyle1"><strong>Galeri</strong></span> </a>
+                </div>
+                <div id="d7">
+                    <span class="newStyle1"><strong><a href="Basin.aspx">Basın</a></strong></span>
+                </div>
+                <div id="d8">
+                    <span class="newStyle1"><strong><a href="İletisim.aspx">İletişim/Ulaşım</a></strong></span>
+                </div>
+                <div id="d9">
+                    <span class="newStyle1"><strong><a href="Rezervasyon.aspx">Rezervasyon</a></strong></span>
+                </div>
+               
+        <div id="14" style="width: 820px; height: 37px;" ><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+               </div>
+            </div>  
+            <div class="div" id="12" style="width: 64px; height: 34px">Face// Twitter</div>
+         </div>
+        
+    </form>
+</body>
+</html>
